@@ -1,17 +1,30 @@
-
 #include "main.h"
-#include <stdio.h>
+
 
 /**
- * main - Prints the name of the program
- * @argc: Number of command line arguments
- * @argv: Array name
- * Return: 0
+ * _puts - print a string, followed by a new line
+ * @str: the string to print
+ *
+ * Return: void
  */
-
-int main(int argc, char *argv[])
+void _puts(char *str)
 {
-	printf("%s\n", argv[argc * 0]);
+	while (*str)
+		_putchar(*str++);
+	_putchar('\n');
+}
+
+
+/**
+ * main - print the name of the program
+ * @argc: size of the argument vector
+ * @argv: program name and arguments
+ *
+ * Return: Always 0
+ */
+int main(int argc __attribute__ ((unused)), char *argv[])
+{
+	_puts(argv[0]);
 
 	return (0);
 }
